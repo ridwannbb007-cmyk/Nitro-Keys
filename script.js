@@ -145,3 +145,96 @@ finishRace();
 }
 
 });
+/* ===========================
+      Finish Race
+=========================== */
+
+function finishRace(){
+
+clearInterval(interval);
+
+typingBox.disabled=true;
+
+popup.style.display="flex";
+
+finalWPM.innerText="⚡ WPM : "+wpm.innerText;
+
+finalAccuracy.innerText="🎯 Accuracy : "+accuracy.innerText;
+
+finalMistakes.innerText="❌ Mistakes : "+mistakes.innerText;
+
+}
+
+/* ===========================
+      Restart Game
+=========================== */
+
+function resetGame(){
+
+clearInterval(interval);
+
+interval=null;
+
+timeLeft=60;
+
+gameStarted=false;
+
+countdownStarted=false;
+
+errorCount=0;
+
+typingBox.disabled=false;
+
+typingBox.value="";
+
+typingBox.focus();
+
+timer.innerText="60";
+
+wpm.innerText="0";
+
+accuracy.innerText="100%";
+
+mistakes.innerText="0";
+
+progressBar.style.width="0%";
+
+nitroFill.style.width="0%";
+
+playerCar.style.left="0%";
+
+aiCar.style.left="0%";
+
+popup.style.display="none";
+
+loadParagraph();
+
+}
+
+restart.onclick=resetGame;
+
+playAgain.onclick=resetGame;
+
+/* ===========================
+      Music Button
+=========================== */
+
+const musicBtn=document.getElementById("musicBtn");
+
+let musicOn=false;
+
+musicBtn.onclick=function(){
+
+musicOn=!musicOn;
+
+if(musicOn){
+
+musicBtn.innerText="🔇 Mute";
+
+}else{
+
+musicBtn.innerText="🎵 Music";
+
+}
+
+};
