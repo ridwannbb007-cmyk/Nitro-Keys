@@ -48,7 +48,17 @@ paragraphs[
 Math.floor(Math.random()*paragraphs.length)
 ];
 
-paragraph.innerText = selectedText;
+paragraph.innerHTML = "";
+
+selectedText.split("").forEach(letter=>{
+
+const span=document.createElement("span");
+
+span.innerText=letter;
+
+paragraph.appendChild(span);
+
+});
 
 }
 
