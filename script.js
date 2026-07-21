@@ -26,7 +26,12 @@ const finalAccuracy = document.getElementById("finalAccuracy");
 const finalMistakes = document.getElementById("finalMistakes");
 
 const playAgain = document.getElementById("playAgain");
+const engineSound = new Audio(
+"assets/audio/wings_of_freedom-f1-racing-car-sound-430459.mp3"
+);
 
+engineSound.loop = true;
+engineSound.volume = 0.3;
 let selectedText = "";
 let timeLeft = 60;
 
