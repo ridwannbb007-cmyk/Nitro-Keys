@@ -309,3 +309,22 @@ duration:600
 }
 
 playAgain.addEventListener("click",celebrateWin);
+/* ===========================
+      Best WPM System
+=========================== */
+
+let bestWPM = localStorage.getItem("bestWPM") || 0;
+
+function saveBestScore(){
+
+if(parseInt(wpm.innerText) > bestWPM){
+
+bestWPM = parseInt(wpm.innerText);
+
+localStorage.setItem("bestWPM", bestWPM);
+
+alert("🏆 New Record! Best WPM: " + bestWPM);
+
+}
+
+}
