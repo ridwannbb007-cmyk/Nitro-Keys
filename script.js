@@ -286,3 +286,26 @@ musicBtn.innerText="🎵 Music";
 }
 
 };
+/* ===========================
+   Win Celebration
+=========================== */
+
+function celebrateWin(){
+
+document.body.animate(
+
+[
+{filter:"brightness(1)"},
+{filter:"brightness(1.2)"},
+{filter:"brightness(1)"}
+],
+
+{
+duration:600
+}
+
+);
+
+}
+
+playAgain.addEventListener("click",celebrateWin);
