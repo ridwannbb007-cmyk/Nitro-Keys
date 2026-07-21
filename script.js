@@ -78,3 +78,70 @@ finishRace();
 },1000);
 
 }
+typingBox.addEventListener("input",()=>{
+
+if(!countdownStarted){
+
+countdownStarted=true;
+
+startTimer();
+
+}
+
+let typed=typingBox.value;
+
+errorCount=0;
+
+for(let i=0;i<typed.length;i++){
+
+if(typed[i]!==selectedText[i]){
+
+errorCount++;
+
+}
+
+}
+
+mistakes.innerText=errorCount;
+
+let correct=typed.length-errorCount;
+
+let acc=typed.length?
+Math.round((correct/typed.length)*100):100;
+
+accuracy.innerText=acc+"%";
+
+let minutes=(60-timeLeft)/60;
+
+let words=typed.trim().split(/\s+/).filter(Boolean).length;
+
+let currentWPM=minutes>0?
+Math.round(words/minutes):0;
+
+wpm.innerText=currentWPM;
+
+let progress=(typed.length/selectedText.length)*100;
+
+if(progress>100){
+
+progress=100;
+
+}
+
+progressBar.style.width=progress+"%";
+
+nitroFill.style.width=progress+"%";
+
+playerCar.style.left=progress+"%";
+
+let aiProgress=Math.min(progress*0.9+(Math.random()*4),100);
+
+aiCar.style.left=aiProgress+"%";
+
+if(typed===selectedText){
+
+finishRace();
+
+}
+
+});
