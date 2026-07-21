@@ -159,7 +159,8 @@ finishRace();
 function finishRace(){
 
 clearInterval(interval);
-
+engineSound.pause();
+engineSound.currentTime = 0;
 typingBox.disabled=true;
 
 popup.style.display="flex";
