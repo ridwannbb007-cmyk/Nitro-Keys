@@ -688,3 +688,38 @@ font-size:30px;
 }
 
 .typing
+.correct{
+
+color:#22c55e;
+
+}
+
+.wrong{
+
+color:#ef4444;
+
+background:rgba(239,68,68,.15);
+
+}
+
+.current{
+
+background:#facc15;
+
+color:black;
+
+border-radius:4px;
+
+animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:.4;
+
+}
+
+}
