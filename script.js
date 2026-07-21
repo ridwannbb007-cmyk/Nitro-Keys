@@ -106,7 +106,37 @@ startTimer();
 }
 
 let typed=typingBox.value;
+const letters = paragraph.querySelectorAll("span");
 
+letters.forEach((letter,index)=>{
+
+const typedLetter = typed[index];
+
+letter.classList.remove("correct","wrong","current");
+
+if(typedLetter==null){
+
+return;
+
+}
+
+if(typedLetter===letter.innerText){
+
+letter.classList.add("correct");
+
+}else{
+
+letter.classList.add("wrong");
+
+}
+
+});
+
+if(letters[typed.length]){
+
+letters[typed.length].classList.add("current");
+
+}
 errorCount=0;
 
 for(let i=0;i<typed.length;i++){
