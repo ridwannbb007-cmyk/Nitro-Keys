@@ -204,7 +204,7 @@ engineSound.currentTime = 0;
 typingBox.disabled=true;
 
 popup.style.display="flex";
-
+saveBestScore();
 finalWPM.innerText="⚡ WPM : "+wpm.innerText;
 
 finalAccuracy.innerText="🎯 Accuracy : "+accuracy.innerText;
