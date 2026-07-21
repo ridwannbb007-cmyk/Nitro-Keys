@@ -64,6 +64,8 @@ behavior:"smooth"
 
 typingBox.focus();
 
+engineSound.play();
+
 };
 
 function startTimer(){
