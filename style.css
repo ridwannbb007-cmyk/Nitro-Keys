@@ -723,3 +723,25 @@ opacity:.4;
 }
 
 }
+/* ===========================
+   Nitro Glow Effects
+=========================== */
+
+.car img{
+filter:drop-shadow(0 0 12px #00e5ff);
+transition:transform .25s ease, filter .25s ease;
+}
+
+.car img:hover{
+transform:scale(1.1);
+filter:drop-shadow(0 0 20px #00e5ff);
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,229,255,.25);
+}
+
+#typingBox:focus{
+box-shadow:0 0 20px rgba(0,229,255,.4);
+}
