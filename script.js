@@ -328,3 +328,30 @@ alert("🏆 New Record! Best WPM: " + bestWPM);
 }
 
 }
+/* ===========================
+      Rank System
+=========================== */
+
+function getRank(score){
+
+if(score >= 91){
+
+return "👑 Nitro Master";
+
+}
+
+if(score >= 61){
+
+return "🥇 Pro Racer";
+
+}
+
+if(score >= 31){
+
+return "🥈 Intermediate";
+
+}
+
+return "🥉 Beginner";
+
+}
