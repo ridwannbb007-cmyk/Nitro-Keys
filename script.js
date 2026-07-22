@@ -185,7 +185,7 @@ let aiProgress=Math.min(progress*0.9+(Math.random()*4),100);
 
 aiCar.style.left=aiProgress+"%";
 
-if(typed===selectedText){
+if(typed.length >= selectedText.length){
 
 finishRace();
 
