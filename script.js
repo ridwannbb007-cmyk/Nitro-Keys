@@ -205,6 +205,7 @@ typingBox.disabled=true;
 
 popup.style.display="flex";
 saveBestScore();
+addXP();      
 finalWPM.innerText="⚡ WPM : "+wpm.innerText;
 
 finalAccuracy.innerText="🎯 Accuracy : "+accuracy.innerText;
