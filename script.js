@@ -365,3 +365,24 @@ return "🥈 Intermediate";
 return "🥉 Beginner";
 
 }
+/* ===========================
+      XP & Level System
+=========================== */
+
+let xp = parseInt(localStorage.getItem("xp")) || 0;
+
+function addXP(){
+
+xp += parseInt(wpm.innerText);
+
+localStorage.setItem("xp", xp);
+
+let level = Math.floor(xp / 200) + 1;
+
+alert(
+"⭐ +" + wpm.innerText +
+" XP\n\n🏅 Level: " + level +
+"\n✨ Total XP: " + xp
+);
+
+}
