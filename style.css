@@ -758,3 +758,24 @@ transform:scaleX(-1);
 #aiCar img{
     transform: scaleX(-1) !important;
 }
+/* ===== New Vehicles ===== */
+
+.car img{
+    width:70px;
+    height:auto;
+    object-fit:contain;
+    user-select:none;
+    pointer-events:none;
+    transition:transform .2s ease;
+}
+
+.car img:hover{
+    transform:scale(1.05);
+}
+
+#playerCar,
+#aiCar{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
