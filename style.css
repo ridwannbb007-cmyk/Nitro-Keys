@@ -258,9 +258,16 @@ margin-bottom:10px;
 =========================== */
 
 .race{
-width:90%;
-max-width:1200px;
-margin:80px auto;
+    width:90%;
+    max-width:1200px;
+    margin:80px auto;
+    position:sticky;
+    top:70px;
+    z-index:100;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(8px);
+    padding:20px;
+    border-radius:20px;
 }
 
 .race h2{
