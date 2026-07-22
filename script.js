@@ -212,7 +212,17 @@ finalAccuracy.innerText="🎯 Accuracy : "+accuracy.innerText;
 finalMistakes.innerText="❌ Mistakes : "+mistakes.innerText;
 
 }
+const rank = document.createElement("p");
 
+rank.innerText = "🏅 Rank : " + getRank(parseInt(wpm.innerText));
+
+rank.style.fontWeight = "bold";
+
+rank.style.fontSize = "22px";
+
+rank.style.marginTop = "15px";
+
+popup.querySelector(".popup-content").appendChild(rank);
 /* ===========================
       Restart Game
 =========================== */
