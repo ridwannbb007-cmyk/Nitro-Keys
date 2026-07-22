@@ -334,9 +334,9 @@ transition:left .15s linear;
 }
 
 .car img{
-width:70px;
-height:auto;
-display:block;
+    width:120px;
+    height:auto;
+    object-fit:contain;
 }
 
 .countdown{
